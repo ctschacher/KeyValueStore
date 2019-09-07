@@ -10,6 +10,7 @@ mongoose.connect('mongodb://root:example@127.0.0.1:27017/admin', { useNewUrlPars
 var db = mongoose.connection;
 db.on('error', console.error.bind(console, 'MongoDB connection error:'));
 
+// Define request responses
 app.post("/v1/key/:key/value/:value",(req,res,next)=>{
     console.log('Received POST request with key/value: ', req.params.key, '/', req.params.value);
     res.send('Key/value accepted');
@@ -17,7 +18,7 @@ app.post("/v1/key/:key/value/:value",(req,res,next)=>{
 
 app.get('/v1/key/:key',(req,res,next)=>{
     console.log('Received GET request for key: ', req.params.key);
-    res.send('Getting Key/Value ');
+    res.send('Getting Key/Value');
 })
 
 app.delete('/v1/key/:key', (req,res,next)=>{

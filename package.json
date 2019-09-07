@@ -7,5 +7,9 @@
     "test": "mocha"
   },
   "author": "Christian Tschacher",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1",
+    "mongoose": "^5.6.13"
+  }
 }

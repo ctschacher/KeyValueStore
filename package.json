@@ -1,0 +1,11 @@
+{
+  "name": "keyvaluestore",
+  "version": "1.0.0",
+  "description": "A simple webserver stores key/value pairs in a MongoDB",
+  "main": "server.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "author": "Christian Tschacher",
+  "license": "ISC"
+}

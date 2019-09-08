@@ -75,18 +75,31 @@ If successful the result should look like this:
   8 passing (91ms)
 ```
 
-
+### Postman
 With [Postman](https://www.getpostman.com/) you have a comprehensive tool to test APIs. In the test folder you can find a small
 collection of tests to get started and to play around with. Just import the **keyValueStore.postman_collection.json** file into Postman.
+
+You would want to import **Kubernetes Cluster.postman_environment.json**. In the environment settings enter the IP address of your cluster.
 
 
 ## Deployment
 
+To deploy pods and services into the Minikube cluster:
+```
+kubectl create -f <FILE>.yaml
+```
+Just do this with all the files in the yamlFiles folder.
+
+
+### Connecting to Minikube cluster
+A very useful command to get the address for the cluster:
 ```
 minikube service -n <namespace> --url <component>
 ```
 * Namespace, like "default"
 * Component, like "webserver"
+
+With that address you can use Postman to see the results. 
 
 
 ## Authors

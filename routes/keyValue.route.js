@@ -37,7 +37,7 @@ router.delete('/key/:key', (req, res, next) => {
     console.log('Received DELETE request for key: ', req.params.key);
     KeyValue.findOneAndRemove(req.params.id, function (err) {
         if (err) return next(err);
-        res.send('Key deleted successfully!');
+        res.send('Key deleted successfully');
     })
 })
 

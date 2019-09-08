@@ -4,8 +4,7 @@ var keyValue = require('./routes/keyValue.route'); // Imports routes
 
 // Set up mongoose connection
 var mongoose = require('mongoose');
-// mongoose.connect(uri, { useFindAndModify: false });
-mongoose.connect('mongodb://root:example@127.0.0.1:27017/admin', { useNewUrlParser: true, useFindAndModify: false }).then(() => {
+mongoose.connect('mongodb://root:example@mongo:27017/admin', { useNewUrlParser: true, useFindAndModify: false }).then(() => {
     console.log("Successfully connected to Mongo database");
 }).catch(err => {
     console.log('Could not connect to Mongo database. Exiting now...', err);

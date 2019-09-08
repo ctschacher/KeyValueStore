@@ -1,0 +1,104 @@
+{
+	"info": {
+		"_postman_id": "d185f1d4-12e3-4e24-a5bb-1cff733b5e72",
+		"name": "keyValueStore",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Post Key/Value",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/x-www-form-urlencoded",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "{{clusterAddress}}/v1/key/car/value/Porsche",
+					"host": [
+						"{{clusterAddress}}"
+					],
+					"path": [
+						"v1",
+						"key",
+						"car",
+						"value",
+						"Porsche"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Key",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/x-www-form-urlencoded",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "{{clusterAddress}}/v1/key/car",
+					"host": [
+						"{{clusterAddress}}"
+					],
+					"path": [
+						"v1",
+						"key",
+						"car"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Key",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/x-www-form-urlencoded",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "{{clusterAddress}}/v1/key/car",
+					"host": [
+						"{{clusterAddress}}"
+					],
+					"path": [
+						"v1",
+						"key",
+						"car"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
